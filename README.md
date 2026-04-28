@@ -64,34 +64,34 @@ Le système adapte automatiquement l’accès selon le rôle :
 ## 📸 Captures d’écran
 
 ### 🌍 Page d’accueil publique
-![Accueil](docs/captures/index.png)
+![Accueil](docs/images/index.png)
 
 ### 🔐 Connexion sécurisée
-![Connexion](docs/captures/login.png)
+![Connexion](docs/images/login.png)
 
 ### 👑 Tableau de bord principal
-![Dashboard](docs/captures/accueil.png)
+![Dashboard](docs/images/accueil.png)
 
 ### 💛 Système de parrainage
-![Parrainage](docs/captures/parrainage.png)
+![Parrainage](docs/images/parrainage.png)
 
 ### 🐾 Gestion des animaux
-![Animaux](docs/captures/animaux.png)
+![Animaux](docs/images/animaux.png)
 
 ### 💉 Gestion des soins
-![Soins](docs/captures/soins.png)
+![Soins](docs/images/soins.png)
 
 ### 👨‍💼 Gestion du personnel
-![Gestion du personnel](docs/captures/gestion_personnel.png)
+![Gestion du personnel](docs/images/gestion_personnel.png)
 
 ### 🛍️ Gestion des employés boutique
-![Employés boutique](docs/captures/employe.png)
+![Employés boutique](docs/images/employe.png)
 
 ### 📈 Gestion du chiffre d’affaires
-![Chiffre d'affaires](docs/captures/ca.png)
+![Chiffre d'affaires](docs/images/ca.png)
 
 ### 🔧 Gestion des réparations
-![Réparations](docs/captures/reparation.png)
+![Réparations](docs/images/reparation.png)
 
 ---
 
