@@ -1,0 +1,750 @@
+:root {
+  --green-950: #10251c;
+  --green-900: #18392b;
+  --green-800: #24533d;
+  --green-700: #2f6b4e;
+  --green-600: #3d7d5d;
+  --green-100: #eef6f0;
+  --green-50: #f6fbf7;
+  --cream: #fcfaf5;
+  --sand: #f6f0e4;
+  --gold: #ccb278;
+  --text: #243126;
+  --muted: #66756b;
+  --white: #ffffff;
+  --danger: #b42318;
+  --success: #027a48;
+  --shadow-lg: 0 20px 50px rgba(24, 57, 43, 0.12);
+  --shadow-md: 0 10px 30px rgba(24, 57, 43, 0.08);
+  --border: 1px solid rgba(36, 49, 38, 0.08);
+  --radius-xl: 28px;
+  --radius-lg: 20px;
+  --radius-md: 14px;
+  --radius-sm: 10px;
+  --max-width: 1200px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 32px 20px;
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+  color: var(--text);
+  background:
+    linear-gradient(rgba(16, 37, 28, 0.60), rgba(16, 37, 28, 0.72)),
+    url('https://images.unsplash.com/photo-1546182990-dffeafbe841d?auto=format&fit=crop&w=1600&q=80') center/cover fixed;
+  min-height: 100vh;
+  line-height: 1.55;
+}
+
+/* Conteneurs principaux */
+.login-container,
+.page-container,
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(14px);
+  border: var(--border);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+  padding: 32px;
+}
+
+/* login plus compact */
+.login-container {
+  max-width: 520px;
+}
+
+/* titres */
+h1, h2, h3 {
+  margin-top: 0;
+  color: var(--green-900);
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2rem, 4vw, 3.1rem);
+  line-height: 1.05;
+  margin-bottom: 12px;
+}
+
+h2 {
+  font-size: 1.35rem;
+  margin-bottom: 14px;
+}
+
+h3 {
+  margin-bottom: 10px;
+}
+
+p {
+  margin-top: 0;
+  color: var(--text);
+}
+
+/* liens */
+a {
+  color: var(--green-800);
+  text-decoration: none;
+  transition: 0.22s ease;
+}
+
+a:hover {
+  color: var(--green-900);
+  text-decoration: none;
+}
+
+/* blocs de liens du haut */
+.top-links,
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+/* boutons génériques */
+/* =========================
+   BOUTONS
+========================= */
+.btn,
+button,
+input[type="submit"] {
+  appearance: none;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.96rem;
+  cursor: pointer;
+  transition: 0.25s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-shadow: var(--shadow-md);
+  background: linear-gradient(135deg, var(--green-900), var(--green-800));
+  color: white;
+}
+
+.btn:hover,
+button:hover,
+input[type="submit"]:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.03);
+}
+
+a.btn,
+a.btn:link,
+a.btn:visited,
+a.btn:hover,
+a.btn:active,
+a.btn:focus {
+  text-decoration: none !important;
+  color: white !important;
+}
+
+/* bouton mot de passe */
+.btn-password,
+a.btn.btn-password,
+a.btn.btn-password:link,
+a.btn.btn-password:visited,
+a.btn.btn-password:hover,
+a.btn.btn-password:active,
+a.btn.btn-password:focus {
+  background: linear-gradient(135deg, #24533d, #3d7d5d) !important;
+  color: white !important;
+}
+
+.btn-password:hover,
+a.btn.btn-password:hover,
+a.btn.btn-password:focus {
+  background: linear-gradient(135deg, #1f4d3b, #2f6b4e) !important;
+}
+
+/* bouton déconnexion */
+.btn-logout,
+a.btn.btn-logout,
+a.btn.btn-logout:link,
+a.btn.btn-logout:visited,
+a.btn.btn-logout:hover,
+a.btn.btn-logout:active,
+a.btn.btn-logout:focus {
+  background: linear-gradient(135deg, #b42318, #d92d20) !important;
+  color: white !important;
+}
+
+.btn-logout:hover,
+a.btn.btn-logout:hover,
+a.btn.btn-logout:focus {
+  background: linear-gradient(135deg, #991b1b, #b91c1c) !important;
+}
+
+/* bouton clair */
+.btn-light,
+a.btn.btn-light,
+a.btn.btn-light:link,
+a.btn.btn-light:visited,
+a.btn.btn-light:hover,
+a.btn.btn-light:active,
+a.btn.btn-light:focus {
+  background: #e8f3ec !important;
+  color: var(--green-900) !important;
+  border: 1px solid rgba(36, 49, 38, 0.10) !important;
+  box-shadow: none !important;
+}
+
+.btn-light:hover,
+a.btn.btn-light:hover,
+a.btn.btn-light:focus {
+  background: #dceee3 !important;
+  color: var(--green-900) !important;
+}
+
+/* bouton contour */
+.btn-outline,
+a.btn.btn-outline,
+a.btn.btn-outline:link,
+a.btn.btn-outline:visited,
+a.btn.btn-outline:hover,
+a.btn.btn-outline:active,
+a.btn.btn-outline:focus {
+  background: white !important;
+  color: var(--green-800) !important;
+  border: 1.5px solid rgba(36, 49, 38, 0.18) !important;
+  box-shadow: none !important;
+}
+
+.btn-outline:hover,
+a.btn.btn-outline:hover,
+a.btn.btn-outline:focus {
+  background: #f7fbf8 !important;
+  color: var(--green-900) !important;
+}
+
+/* boutons action tableau */
+.btn-modifier {
+  background: linear-gradient(135deg, #d99000, #f4b400) !important;
+  color: white !important;
+  padding: 10px 14px;
+  border-radius: 999px;
+  display: inline-flex;
+}
+
+.btn-supprimer,
+.btn-delete {
+  background: linear-gradient(135deg, #b42318, #d92d20) !important;
+  color: white !important;
+  padding: 10px 14px;
+  border-radius: 999px;
+  display: inline-flex;
+}
+
+.btn-secondary {
+  background: linear-gradient(135deg, #b8914d, #ccb278) !important;
+  color: white !important;
+}
+
+/* top-links garde juste la mise en forme, pas les couleurs */
+.top-links a.btn,
+.actions a.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 18px;
+  border-radius: 999px;
+  font-weight: 700;
+}
+
+/* IMPORTANT : force le même style pour tous les boutons du menu */
+.top-links a.btn:not(.btn-password):not(.btn-logout):not(.btn-light):not(.btn-outline) {
+  background: linear-gradient(135deg, var(--green-900), var(--green-800)) !important;
+  color: white !important;
+  text-decoration: none !important;
+  padding: 12px 18px !important;
+  border-radius: 999px !important;
+  font-weight: 700 !important;
+  box-shadow: var(--shadow-md) !important;
+}
+
+.top-links a.btn:not(.btn-password):not(.btn-logout):not(.btn-light):not(.btn-outline):hover {
+  background: linear-gradient(135deg, var(--green-900), var(--green-800)) !important;
+  color: white !important;
+  transform: translateY(-2px);
+  filter: brightness(1.03);
+}
+
+/* variantes */
+.btn-password {
+  background: linear-gradient(135deg, #24533d, #3d7d5d);
+  color: white !important;
+}
+
+.btn-password:hover {
+  background: linear-gradient(135deg, #1f4d3b, #2f6b4e);
+}
+
+.btn-logout {
+  background: linear-gradient(135deg, #b42318, #d92d20);
+  color: white !important;
+}
+
+.btn-logout:hover {
+  background: linear-gradient(135deg, #991b1b, #b91c1c);
+}
+
+.btn-light {
+  background: #e8f3ec;
+  color: var(--green-900) !important;
+  border: 1px solid rgba(36, 49, 38, 0.10);
+  box-shadow: none;
+}
+
+.btn-light:hover {
+  background: #dceee3;
+  color: var(--green-900) !important;
+}
+
+.btn-outline {
+  background: white;
+  color: var(--green-800) !important;
+  border: 1.5px solid rgba(36, 49, 38, 0.18);
+  box-shadow: none;
+}
+
+.btn-outline:hover {
+  background: #f7fbf8;
+  color: var(--green-900) !important;
+}
+
+.btn-modifier {
+  background: linear-gradient(135deg, #d99000, #f4b400);
+  color: white !important;
+  padding: 10px 14px;
+  border-radius: 999px;
+  display: inline-block;
+}
+
+.btn-supprimer {
+  background: linear-gradient(135deg, #b42318, #d92d20);
+  color: white !important;
+  padding: 10px 14px;
+  border-radius: 999px;
+  display: inline-block;
+}
+
+.btn-secondary {
+  background: linear-gradient(135deg, #b8914d, #ccb278);
+  color: white !important;
+}
+
+a.btn,
+a.btn-password,
+a.btn-logout,
+a.btn-light,
+a.btn-outline {
+  text-decoration: none;
+}
+
+/* formulaires */
+form {
+  margin-top: 18px;
+}
+
+.form-group {
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+label {
+  font-weight: 700;
+  color: var(--green-900);
+}
+
+input,
+select,
+textarea,
+.input-field {
+  width: 100%;
+  padding: 13px 14px;
+  border-radius: 14px;
+  border: 1px solid rgba(36, 49, 38, 0.16);
+  background: #fff;
+  color: var(--text);
+  outline: none;
+  transition: 0.2s ease;
+  font: inherit;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+.input-field:focus {
+  border-color: var(--green-700);
+  box-shadow: 0 0 0 4px rgba(47, 107, 78, 0.10);
+}
+
+/* liens secondaires uniquement si PAS déjà .btn */
+a[href*="accueil.php"]:not(.btn):not(.btn-logout):not(.btn-light):not(.btn-outline),
+a[href*="logout.php"]:not(.btn):not(.btn-logout):not(.btn-light):not(.btn-outline),
+a[href*="animaux.php"]:not(.btn):not(.btn-logout):not(.btn-light):not(.btn-outline),
+a[href*="soins.php"]:not(.btn):not(.btn-logout):not(.btn-light):not(.btn-outline),
+a[href*="gestion_personnel.php"]:not(.btn):not(.btn-logout):not(.btn-light):not(.btn-outline),
+a[href*="ajout_animal.php"]:not(.btn):not(.btn-logout):not(.btn-light):not(.btn-outline),
+a[href*="ajout_soin.php"]:not(.btn):not(.btn-logout):not(.btn-light):not(.btn-outline),
+a[href*="ajouter_personnel.php"]:not(.btn):not(.btn-logout):not(.btn-light):not(.btn-outline),
+a[href*="modifier_personnel.php"]:not(.btn):not(.btn-logout):not(.btn-light):not(.btn-outline) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 11px 16px;
+  border-radius: 999px;
+  background: var(--green-700);
+  color: white;
+  font-weight: 700;
+}
+
+a[href*="accueil.php"]:not(.btn):not(.btn-logout):not(.btn-light):not(.btn-outline):hover,
+a[href*="logout.php"]:not(.btn):not(.btn-logout):not(.btn-light):not(.btn-outline):hover,
+a[href*="animaux.php"]:not(.btn):not(.btn-logout):not(.btn-light):not(.btn-outline):hover,
+a[href*="soins.php"]:not(.btn):not(.btn-logout):not(.btn-light):not(.btn-outline):hover,
+a[href*="gestion_personnel.php"]:not(.btn):not(.btn-logout):not(.btn-light):not(.btn-outline):hover,
+a[href*="ajout_animal.php"]:not(.btn):not(.btn-logout):not(.btn-light):not(.btn-outline):hover,
+a[href*="ajout_soin.php"]:not(.btn):not(.btn-logout):not(.btn-light):not(.btn-outline):hover,
+a[href*="ajouter_personnel.php"]:not(.btn):not(.btn-logout):not(.btn-light):not(.btn-outline):hover,
+a[href*="modifier_personnel.php"]:not(.btn):not(.btn-logout):not(.btn-light):not(.btn-outline):hover {
+  background: #e3f1e7;
+  transform: translateY(-1px);
+}
+
+/* messages */
+.erreur,
+.error {
+  background: rgba(180, 35, 24, 0.08);
+  color: var(--danger);
+  border: 1px solid rgba(180, 35, 24, 0.16);
+  padding: 14px 16px;
+  border-radius: 14px;
+  font-weight: 700;
+  margin: 14px 0;
+}
+
+.succes,
+.success {
+  background: rgba(2, 122, 72, 0.08);
+  color: var(--success);
+  border: 1px solid rgba(2, 122, 72, 0.16);
+  padding: 14px 16px;
+  border-radius: 14px;
+  font-weight: 700;
+  margin: 14px 0;
+}
+
+/* tableau premium */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+  background: white;
+  border-radius: 18px;
+  box-shadow: var(--shadow-md);
+  margin-top: 20px;
+}
+
+th {
+  background: linear-gradient(135deg, var(--green-900), var(--green-800));
+  color: white;
+  font-weight: 700;
+  text-align: left;
+  padding: 16px 14px;
+  font-size: 0.95rem;
+}
+
+td {
+  padding: 15px 14px;
+  border-bottom: 1px solid rgba(36, 49, 38, 0.08);
+  vertical-align: top;
+}
+
+tr:nth-child(even) td {
+  background: #fbfdfb;
+}
+
+tr:hover td {
+  background: #f4faf5;
+}
+
+/* boutons dans tableaux */
+table .btn {
+  padding: 8px 12px;
+  font-size: 0.9rem;
+}
+
+/* pages de dashboard / menu */
+hr {
+  border: none;
+  height: 1px;
+  background: rgba(36, 49, 38, 0.10);
+  margin: 24px 0;
+}
+
+/* checkboxes */
+input[type="checkbox"] {
+  width: auto;
+  transform: scale(1.15);
+  margin-right: 8px;
+}
+
+/* style sur les paragraphes de détail */
+.page-container > p,
+.login-container > p,
+.container > p {
+  font-size: 0.98rem;
+}
+
+/* si une page a des liens seuls avec des <br> */
+body > a,
+.container > a,
+.page-container > a {
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+form .top-links {
+  margin-top: 10px;
+}
+
+form .btn,
+form button[type="submit"] {
+  min-width: 200px;
+}
+
+/* =========================
+   ACCUEIL + PARRAINAGE
+========================= */
+
+.home-hero {
+  padding: 42px;
+}
+
+.hero-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, rgba(204, 178, 120, 0.18), rgba(47, 107, 78, 0.18));
+  color: var(--green-900);
+  border: 1px solid rgba(36, 49, 38, 0.08);
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-weight: 800;
+  margin-bottom: 14px;
+}
+
+.hero-text {
+  max-width: 760px;
+  font-size: 1.06rem;
+  color: var(--muted);
+  margin-bottom: 30px;
+}
+
+.home-grid,
+.home-info,
+.offers-grid,
+.sponsorship-layout {
+  display: grid;
+  gap: 22px;
+}
+
+.home-grid {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  margin: 28px 0 26px;
+}
+
+.home-info {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  margin-top: 10px;
+}
+
+.choice-card,
+.info-card,
+.offer-card,
+.form-panel,
+.visual-panel,
+.animal-highlight {
+  background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(246,251,247,0.96));
+  border: var(--border);
+  border-radius: 24px;
+  box-shadow: var(--shadow-md);
+  padding: 24px;
+}
+
+.choice-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.choice-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top right, rgba(204, 178, 120, 0.18), transparent 35%);
+  pointer-events: none;
+}
+
+.choice-icon {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+.btn-large {
+  min-width: 220px;
+  padding: 14px 22px;
+  font-size: 1rem;
+}
+
+.sponsorship-page .section-intro {
+  margin-bottom: 26px;
+}
+
+.offers-grid {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  margin-bottom: 28px;
+}
+
+.offer-card {
+  text-align: center;
+}
+
+.offer-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+}
+
+.offer-card .price {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--green-900);
+  margin-bottom: 10px;
+}
+
+.offer-card.bronze {
+  border-top: 6px solid #b57a4b;
+}
+
+.offer-card.silver {
+  border-top: 6px solid #9aa4ad;
+}
+
+.offer-card.gold {
+  border-top: 6px solid var(--gold);
+}
+
+.sponsorship-layout {
+  grid-template-columns: 1.2fr 0.8fr;
+  align-items: stretch;
+}
+
+.visual-panel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.animal-highlight {
+  width: 100%;
+  text-align: center;
+  background:
+    linear-gradient(rgba(16, 37, 28, 0.78), rgba(16, 37, 28, 0.82)),
+    url('https://images.unsplash.com/photo-1546182990-dffeafbe841d?auto=format&fit=crop&w=1400&q=80') center/cover;
+  color: white;
+  min-height: 420px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.animal-highlight h2,
+.animal-highlight p {
+  color: white;
+}
+
+.animal-emoji {
+  font-size: 2.4rem;
+  margin-bottom: 12px;
+}
+
+/* responsive */
+@media (max-width: 900px) {
+  body {
+    padding: 18px 12px;
+    background-attachment: scroll;
+  }
+
+  .login-container,
+  .page-container,
+  .container {
+    padding: 22px;
+    border-radius: 22px;
+  }
+
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+
+  table {
+    box-shadow: none;
+    background: transparent;
+  }
+
+  tr {
+    background: white;
+    border-radius: 18px;
+    box-shadow: var(--shadow-md);
+    margin-bottom: 16px;
+    overflow: hidden;
+  }
+
+  th {
+    display: none;
+  }
+
+  td {
+    border: none;
+    border-bottom: 1px solid rgba(36, 49, 38, 0.06);
+    position: relative;
+    padding: 12px 14px;
+  }
+
+  td:last-child {
+    border-bottom: none;
+  }
+
+  .sponsorship-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .btn-large {
+    width: 100%;
+  }
+
+  .home-hero {
+    padding: 24px;
+  }
+}
